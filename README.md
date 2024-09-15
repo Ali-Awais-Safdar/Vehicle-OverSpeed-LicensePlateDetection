@@ -5,18 +5,19 @@ This project combines vehicle overspeed detection with number plate recognition 
 This script focuses on number plate recognition. It uses the EasyOCR library for text detection and extraction from images. The process involves preprocessing the image, detecting the license plate, and saving the processed image with the identified license plate.
 
 ## Usage:
-
-#### python testdet.py
 Make sure to adjust the input and output folders as needed. The identified images will be saved in the specified output folder.
 
-## speed_detector.py
-This script focuses on vehicle overspeed detection. It uses the OpenCV and dlib libraries to detect and track vehicles in a video stream. The estimated speed of each vehicle is calculated and displayed on the video feed. Additionally, images of speeding cars are saved to the "offenders" folder.
+This script focuses on vehicle overspeed detection. It uses the OpenCV and dlib libraries to detect and track vehicles in a video stream. The estimated speed of each vehicle is calculated and displayed on the video feed. Additionally, images of speeding cars are saved to the "offenders" folder. You can run it in the terminal using:
 
-#### python speed_detector.py
+```
+python speed_detector.py
+```
 
 Make sure to provide the correct video file path by changing the line:
 
-#### video = cv2.VideoCapture("your_video_filename.mp4")
+```
+video = cv2.VideoCapture("your_video_filename.mp4")
+```
 
 Several test videos are provided in the "videos" folder, and you can use them by changing the filename in the above line.
 
@@ -32,7 +33,15 @@ Ensure that you have the required dependencies installed:
 - Pillow
 You can install these dependencies using the following:
 
-#### pip install opencv-python dlib easyocr numpy Pillow
+```
+pip install opencv-python dlib easyocr numpy Pillow
+```
+## User Interface
+We have also provided a GUI using Flask where you can add a video and run the both scripts accordingly.
+You can run this by using:
+```
+python app.py
+```
 
 ## Notes:
 - Adjust the script parameters, such as file paths and detection parameters, based on your specific use case.
